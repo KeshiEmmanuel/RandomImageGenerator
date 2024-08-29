@@ -14,7 +14,12 @@ export type PhotoType = {
   id: string;
   liked_by_user?: boolean;
   likes?: number;
-  links?: object;
+  links?: {
+    download?: string;
+    download_location?: string;
+    html?: string;
+    self?: string;
+  };
   locations?: object;
   promoted_at?: string;
   slug?: string;
@@ -35,6 +40,8 @@ export type PhotoType = {
   };
   views?: number;
   width: number;
+
+  setSelectedImageID: React.Dispatch<React.SetStateAction<string | undefined>>;
 };
 
 export type PhotosType = PhotoType[];

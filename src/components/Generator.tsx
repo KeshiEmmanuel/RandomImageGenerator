@@ -5,10 +5,21 @@ import { PhotosType } from "../types/PhotoTypes";
 import GenerateButton from "./GenerateButton";
 import Loading from "./Loading";
 import Input from "./Input";
-export default function Generator() {
+import { useNavigate } from "react-router-dom";
+
+type GeneratorPropsTypes = {
+  setInput: React.Dispatch<React.SetStateAction<string | undefined>>;
+  input?: string | undefined;
+};
+
+export default function Generator({ setInput, input }: GeneratorPropsTypes) {
+  const navigate = useNavigate();
+
   const [images, setImages] = useState<PhotosType>([]);
 
+  const [selectedImageID, setSelectedImageID] = useState<string>();
   const [loading, setLoading] = useState<boolean>(true);
+
   useEffect(() => {
     setLoading(true);
     async function FetchRandomImages() {
@@ -18,19 +29,32 @@ export default function Generator() {
     }
     FetchRandomImages();
   }, []);
+
   console.log(images);
 
+  function handleGenerateCLick() {
+    if (selectedImageID && input) {
+      console.log(selectedImageID);
+      return navigate(`/thankyouphoto/${selectedImageID}`);
+    }
+  }
   return (
-    <section className="flex flex-col justify-center">
-      <div className="flex gap-2 justify-center items-center">
+    <section className="flex flex-col justify-center p-10">
+      <div className="flex gap-2 flex-wrap justify-center items-center ">
         {loading ? (
           <Loading />
         ) : (
-          images.map((image) => <Image key={image.id} {...image} />)
+          images.map((image) => (
+            <Image
+              key={image.id}
+              {...image}
+              setSelectedImageID={setSelectedImageID}
+            />
+          ))
         )}
       </div>
-      <Input />
-      <GenerateButton />
+      <Input setInput={setInput} />
+      <GenerateButton input={input} handleGenerateCLick={handleGenerateCLick} />
     </section>
   );
 }
