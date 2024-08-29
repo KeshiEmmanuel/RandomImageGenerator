@@ -35,7 +35,7 @@ export default function ThankYouPage({ input }: ThankYouPageProps) {
         {input}
       </p>
 
-      <button className="bg-gray-800 text-yellow-200 px-2 py-3 rounded-lg absolute bottom-0 right-5">
+      <button className="bg-gray-800 text-yellow-200 px-5 py-3 rounded-lg absolute bottom-0 right-5">
         <Link to={"/"}>Go back to Home Screen</Link>
       </button>
     </section>

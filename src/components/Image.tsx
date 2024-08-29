@@ -12,9 +12,11 @@ export default function Image({
     <section className="mt-10">
       <img
         src={urls.full}
-        className="w-[500px] h-[500px] object-cover rounded-md cursor-pointer "
+        className={`w-[500px] h-[500px] object-cover rounded-md cursor-pointer active:shadow-2xl`}
         alt={alt_description}
-        onClick={() => setSelectedImageID(id)}
+        onClick={() => {
+          setSelectedImageID(id);
+        }}
       />
       <div className="flex gap-2">
         {" "}
@@ -36,7 +38,7 @@ export default function Image({
 
           <p>{likes}</p>
         </button>
-        <a href={links?.download_location} target="_blank">
+        <a href={links?.download} target="_blank">
           <button className="flex gap-1 items-center bg-gray-300 text-gray-700 w-[130px] text-sm px-3 py-2 mt-2 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
