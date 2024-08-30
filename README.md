@@ -31,3 +31,7 @@ To run the project in your local environment, follow these steps:
 - Also, the download button for personalized image is not available due to my app been reviewed
 
 ## 📺 Video
+
+
+https://github.com/user-attachments/assets/a933f4bf-0d04-498f-bf68-5109f6f48208
+
