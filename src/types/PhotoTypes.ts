@@ -37,6 +37,11 @@ export type PhotoType = {
   user?: {
     id?: string;
     updated_at?: string;
+    first_name?: string;
+    instagram_username?: string;
+    links?: {
+      html?: string;
+    };
   };
   views?: number;
   width: number;

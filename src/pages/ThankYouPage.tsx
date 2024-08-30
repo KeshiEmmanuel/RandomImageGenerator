@@ -28,7 +28,7 @@ export default function ThankYouPage({ input }: ThankYouPageProps) {
       </h1>
       <img
         src={image?.urls.full}
-        className="w-[20%]  object-cover "
+        className="w-[20%] h-[20%]  object-cover"
         alt={image?.alt_description}
       />
       <p className="absolute bottom-5 text-gray-300 text-xl font-bold uppercase">

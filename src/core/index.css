@@ -5,3 +5,11 @@
 * {
   font-family: Poppins, sans-serif;
 }
+
+::-webkit-scrollbar {
+  background-color: yellow;
+}
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 30px;
+}

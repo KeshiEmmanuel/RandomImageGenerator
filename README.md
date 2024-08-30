@@ -1,50 +1,33 @@
-# React + TypeScript + Vite
+<div align="center"><img src="/public/Random-Generator.png" width="750px" /></div>
+<h1>Image generator</h1>
+<p>Intuitive random image generator </p>
+<h3>🔩 Features</h3>
+<ul>
+<li>Select Image</li>
+<li>Input for name</li>
+<li>Customized Image page</li>
+<li>Fast Navigation using  in React-router</li>
+</ul>
+<h3>🛠 Technologies</h3>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- `Axios`
+- `React.js`
+- `TypeScript`
+- `Tailwind CSS`
+- `React - Router`
 
-Currently, two official plugins are available:
+## 🚦 Running the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run the project in your local environment, follow these steps:
 
-## Expanding the ESLint configuration
+1. Clone the repository to your local machine.
+2. Run `npm install` or `yarn` in the project directory to install the required dependencies.
+3. Run `npm run start` or `yarn start` to get the project started.
+4. Open [http://localhost:5173](http://localhost:5173) (or the address shown in your console) in your web browser to view the app.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🐞 Issues
 
-- Configure the top-level `parserOptions` property like this:
+- Right now, My app is been reviewed by Unsplash API to increase API call limits.
+- Also, the download button for personalized image is not available due to my app been reviewed
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 📺 Video
